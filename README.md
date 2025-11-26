@@ -6,7 +6,7 @@ Learn about **Prerequisites** (Certificate, PrivateKey, Java KeyStore etc.) of t
 ### Usage in local developer machine: 
 Run the following commands in your developer machine, assuming Git and Maven have been installed and configured.
 
-1. git clone https://github.nwie.net/Nationwide/opensaml3-utils.git
+1. git clone https://github.com/MatthewWilliamsNW/opensaml3-utils
 2. cd opensaml3-utils
 3. mvn clean
 4. mvn install
@@ -29,7 +29,7 @@ A Java.util.Map is returned with following four key-value pairs.
 *Note:* The most desired Base64Encoded of <Saml:Assertion/> is associated with "SAML_ASSERTION_BASE64_ENCODED" key in the map.
 
 ### Publish maven artificat (JAR) file to Nexus:
-mvn deploy:deploy-file -DgroupId=com.nationwide -DartifactId=opensaml3-utils -Dversion=0.0.1 -Dpackaging=jar -Dfile=opensaml3-utils-0.0.1.jar -DrepositoryId=releases -Durl=http://repo.nwie.net/nexus/content/repositories/maven-internal/
+mvn deploy:deploy-file -DgroupId=com.nationwide -DartifactId=opensaml3-utils -Dversion=0.0.1 -Dpackaging=jar -Dfile=opensaml3-utils-0.0.1.jar -DrepositoryId=releases -Durl=your repo
 
 ### Publish maven artificat (JAR) file to Artifactory:
 mvn deploy
