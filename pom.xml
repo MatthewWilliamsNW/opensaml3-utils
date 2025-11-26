@@ -1,0 +1,97 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.nationwide</groupId>
+	<artifactId>opensaml3-utils</artifactId>
+	<version>0.0.1</version>
+	<url>http://maven.apache.org</url>
+	<scm>
+		<connection>scm:git:https://github.nwie.net/Nationwide/opensaml3-utils.git</connection>
+		<developerConnection>scm:git:https://github.nwie.net/Nationwide/opensaml3-utils.git</developerConnection>
+		<tag>**</tag>
+	</scm>
+
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.version>1.8</java.version>
+	</properties>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.0.2</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.5.3</version>
+				<configuration>
+					<tagBase>git@github.nwie.net:Nationwide/opensaml3-utils.git</tagBase>
+				</configuration>
+			</plugin>
+			<!-- MUST run in git bash mvn deploy -Dmaven.test.skip=true scm:tag -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-scm-plugin</artifactId>
+				<version>1.9.5</version>
+				<configuration>
+					<tag>${project.artifactId}-${project.version}</tag>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<dependencies>
+		<dependency>
+			<groupId>org.opensaml</groupId>
+			<artifactId>opensaml-core</artifactId>
+			<version>3.2.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.opensaml</groupId>
+			<artifactId>opensaml-saml-impl</artifactId>
+			<version>3.2.0</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.opensaml</groupId>
+			<artifactId>opensaml-saml-api</artifactId>
+			<version>3.2.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.santuario</groupId>
+			<artifactId>xmlsec</artifactId>
+			<version>2.0.5</version>
+		</dependency>
+
+		<dependency>
+			<groupId>net.shibboleth.utilities</groupId>
+			<artifactId>java-support</artifactId>
+			<version>7.2.0</version>
+		</dependency>
+
+	</dependencies>
+
+	<distributionManagement>
+		<repository>
+			<id>central</id>
+			<name>Internal Releases</name>
+			<url>https://art.nwie.net/artifactory/libs-release</url>
+		</repository>
+
+		<snapshotRepository>
+			<id>central</id>
+			<name>Internal Snapshots</name>
+			<url>https://art.nwie.net/artifactory/libs-snapshot</url>
+		</snapshotRepository>
+	</distributionManagement>
+</project>
