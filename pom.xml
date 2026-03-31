@@ -6,11 +6,6 @@
 	<artifactId>opensaml3-utils</artifactId>
 	<version>0.0.1</version>
 	<url>http://maven.apache.org</url>
-	<scm>
-		<connection>scm:git:https://github.nwie.net/Nationwide/opensaml3-utils.git</connection>
-		<developerConnection>scm:git:https://github.nwie.net/Nationwide/opensaml3-utils.git</developerConnection>
-		<tag>**</tag>
-	</scm>
 
 
 	<properties>
@@ -85,13 +80,13 @@
 		<repository>
 			<id>central</id>
 			<name>Internal Releases</name>
-			<url>https://art.nwie.net/artifactory/libs-release</url>
+			<url></url>
 		</repository>
 
 		<snapshotRepository>
 			<id>central</id>
 			<name>Internal Snapshots</name>
-			<url>https://art.nwie.net/artifactory/libs-snapshot</url>
+			<url></url>
 		</snapshotRepository>
 	</distributionManagement>
 </project>
